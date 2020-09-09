@@ -11,6 +11,10 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TotalCountComponent } from './total-count/total-count.component';
 import { ReadingListComponent } from './reading-list/reading-list.component';
+import { BookSearchInputFormComponent } from './book-search/book-search-input-form/book-search-input-form.component';
+import { BookSearchItemsComponent } from './book-search/book-search-items/book-search-items.component'
+import { BookSearchResultsComponent } from './book-search/book-search-results/book-search-results.component'
+import { from } from 'rxjs';
 
 const EXPORTS = [
   BookSearchComponent,
@@ -34,6 +38,6 @@ const EXPORTS = [
     BooksDataAccessModule
   ],
   exports: [...EXPORTS],
-  declarations: [...EXPORTS]
+  declarations: [...EXPORTS, BookSearchInputFormComponent, BookSearchItemsComponent,BookSearchResultsComponent]
 })
 export class BooksFeatureModule {}
