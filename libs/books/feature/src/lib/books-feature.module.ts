@@ -19,7 +19,10 @@ import { from } from 'rxjs';
 const EXPORTS = [
   BookSearchComponent,
   TotalCountComponent,
-  ReadingListComponent
+  ReadingListComponent,
+  BookSearchInputFormComponent,
+  BookSearchItemsComponent,
+  BookSearchResultsComponent
 ];
 
 @NgModule({
@@ -38,6 +41,6 @@ const EXPORTS = [
     BooksDataAccessModule
   ],
   exports: [...EXPORTS],
-  declarations: [...EXPORTS, BookSearchInputFormComponent, BookSearchItemsComponent,BookSearchResultsComponent]
+  declarations: [...EXPORTS]
 })
 export class BooksFeatureModule {}

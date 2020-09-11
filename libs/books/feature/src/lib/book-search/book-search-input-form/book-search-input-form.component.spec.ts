@@ -1,14 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookSearchInputFormComponent } from './book-search-input-form.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BooksFeatureModule } from '../../books-feature.module';
+import { SharedTestingModule } from '@tmo/shared/testing';
 
-describe('BookSearchFormComponent', () => {
+describe('BookSearchInputFormComponent', () => {
   let component: BookSearchInputFormComponent;
   let fixture: ComponentFixture<BookSearchInputFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BookSearchInputFormComponent ]
+      imports: [BooksFeatureModule, SharedTestingModule, NoopAnimationsModule]
     })
     .compileComponents();
   }));
